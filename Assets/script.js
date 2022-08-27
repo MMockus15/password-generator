@@ -15,80 +15,78 @@
 // THEN the password is either displayed in an alert or written to the page
 
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-var passwordLength = prompt("How many characters would you like your password to be? Must choose between 8-128 characters.");
-var password ="";
-for (var i = 0; i <= passwordLength; i++){
-  var randomNumber = Math.floor(Math.random() * chars.length);
-  password += chars.substring(randomNumber, randomNumber +1);
-}
-
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t,", "u", "v", "w", "x", "y", "z"];
 var specChars = ['@',
- '%',
- '+',
- '\\',
- '/',
- "'",
- '!',
- '#',
- '$',
- '^',
- '?',
- ':',
- ',',
- ')',
- '(',
- '}',
- '{',
- ']',
- '[',
- '~',
- '-',
- '_',
- '.',
+'%',
+'+',
+'\\',
+'/',
+"'",
+'!',
+'#',
+'$',
+'^',
+'?',
+':',
+',',
+')',
+'(',
+'}',
+'{',
+']',
+'[',
+'~',
+'-',
+'_',
+'.',
 ];
 var numbers = [1 ,2 , 3, 4, 5, 6, 7, 8, 9, 0];
 
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
-// write code to generate the users password
 
-function generatePassword() {
-
-  if(confirm("Would you like the password to use lowercase letters?")){
-    options.lowerCase = true};
-  }
-  {
-  if(confirm("Would you like the password to use uppercase letters?")){
-    options.upperCase = true};
-  }
+function generatePassword()
+// Write password to the #password input
+// function writePassword() {
+  var password = generatePassword()
+  var passwordText = document.querySelector("#password");
+  var password =("");
+  var characters = [];
   
-  if(confirm("Would you like the password to use special characters?")){
-    options.specChars = true};
-  {
-  }
-  if(confirm("Would you like the password to use numbers?")){
-    options.numbers = true};
-  {
-  }
-
   // prompt the user - length (8-128)
+  var passwordLength = prompt("How many characters would you like your password to be? Must choose between 8-128 characters.");
+  // parseInt needed here
   if(Options.length < 8 || Options.length > 128){
-
   }
+  // alert
+
+
+  
   // confirm use of - uppercase, lowercase, numbers, specChars
+// confirmation window asking what types of characters the user would like to use for their generated password.
+var upperCase = confirm("Would you like the password to use uppercase letters?")
+var lowerCase = confirm("Would you like the password to use lowercase letters?")
+var specChars = confirm("Would you like the password to use special charaters?")
+var numbers = confirm("Would you like the password to use numbers?")
+if (!upperCase && !lowerCase && !specChars && !numbers) {
+  alert("You must choose at least one charater.")
+}
+
+// if (uppercase){} else * 4
+
   // Generate a user password that meets the selected criteria
+//   for (var i = 0; i <= passwordLength; i++){
+//     var randomNumber = Math.floor(Math.random() * chars.length);
+//     password += chars.substring(randomNumber, randomNumber +1);
+// }
+
+
   // make sure that all of the users character selections are included in the output
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  passwordText.value = password;
+  
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
+  
