@@ -155,10 +155,9 @@ allPossibleChars=allPossibleChars.concat(numbersChars)
 }
 for (let i = 0; i < passwordLength; i++) {
 var randomIndex = Math.floor(Math.random() * allPossibleChars.length)
-console.log(randomIndex)
 finalPassword.push(allPossibleChars[randomIndex])
 }
-// return finalPassword.join("")
+return finalPassword.join("")
 }
 
 
