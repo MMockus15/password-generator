@@ -102,7 +102,8 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   // prompt the user - length (8-128)
-  // parseInt = must be numerical
+  // parseInt = must be string
+  var finalPassword = []
   var passwordLength = parseInt(
     prompt(
       "How many characters would you like your password to be? Must choose between 8-128 characters."
@@ -152,13 +153,17 @@ allPossibleChars=allPossibleChars.concat(specialChars)
 if (numbers) {
 allPossibleChars=allPossibleChars.concat(numbersChars)
 }
-console.log (allPossibleChars)
 }
 
-for (passwordLength) {
-
+for (let i = 0; i < passwordLength; i++) {
+var randomCharacters = random(allPossibleChars); 
+finalPassword.push(randomCharacters)
+return finalPassword.join(" ")
 }
 
+function random(array){
+  return array[Math.floor](Math.random)() * array.length
+}
 
 // Write password to the #password input
 function writePassword() {
