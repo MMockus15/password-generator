@@ -153,17 +153,15 @@ allPossibleChars=allPossibleChars.concat(specialChars)
 if (numbers) {
 allPossibleChars=allPossibleChars.concat(numbersChars)
 }
-}
-
 for (let i = 0; i < passwordLength; i++) {
-var randomCharacters = random(allPossibleChars); 
-finalPassword.push(randomCharacters)
-return finalPassword.join(" ")
+var randomIndex = Math.floor(Math.random() * allPossibleChars.length)
+console.log(randomIndex)
+finalPassword.push(allPossibleChars[randomIndex])
+}
+// return finalPassword.join("")
 }
 
-function random(array){
-  return array[Math.floor](Math.random)() * array.length
-}
+
 
 // Write password to the #password input
 function writePassword() {
