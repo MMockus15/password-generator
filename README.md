@@ -4,9 +4,9 @@
 
 For week 3's challenge I completed a password generator. This project was an important introduction into JavaScript. It helped build knowedge around creating and naming variables, arrays, booleans, for loops, and working to debug code. This generator solves the problem of having to create a specificly lengthed password, with random characters and numbers in the result. I believe my project executes this process well by making sure that the user chooses the correct options and won't be able to break my code. This project really helped me to understand why naming variables is so important, how to concat different arrays, and how to generate a random chain of characters.
 
-![Image](./assets/images/marla-mockus-profile.png)
+![Image](./assets/images/password-generator.png)
 
-[deployed site](https://mmockus15.github.io/marla-mockus-portfolio/)
+[deployed site](https://mmockus15.github.io/password-generator/)
 
 Acceptance Criteria:
 
