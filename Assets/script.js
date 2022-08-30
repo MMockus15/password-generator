@@ -123,6 +123,7 @@ function generatePassword() {
     return;
   }
 
+  // function to use true or false and combine arrays
   var allPossibleChars = [];
   if (upperCase) {
     allPossibleChars = allPossibleChars.concat(upperCaseChars);
